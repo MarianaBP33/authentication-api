@@ -8,9 +8,9 @@
 		<version>3.0.6</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>dev.ososuna</groupId>
+	<groupId>dev.chetopuffet</groupId>
 	<artifactId>authentication-api</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>authentication-api</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
