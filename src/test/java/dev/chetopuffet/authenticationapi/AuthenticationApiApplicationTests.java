@@ -1,4 +1,4 @@
-package dev.ososuna.authenticationapi;
+package dev.chetopuffet.authenticationapi;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
