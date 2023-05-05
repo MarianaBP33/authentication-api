@@ -3,6 +3,9 @@ package dev.chetopuffet.authenticationapi.model;
 import java.time.LocalDate;
 import java.util.UUID;
 
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.MappedSuperclass;
 import lombok.AllArgsConstructor;
@@ -24,9 +27,11 @@ public abstract class AbstractModificationAttributesEntity extends AbstractSimpl
   private UUID updatedBy;
 
   @Column(name="created_date")
+  @CreationTimestamp
   private LocalDate createdDate;
 
   @Column(name="updated_date")
+  @UpdateTimestamp
   private LocalDate updatedDate;
 
   @Column(name="active")
