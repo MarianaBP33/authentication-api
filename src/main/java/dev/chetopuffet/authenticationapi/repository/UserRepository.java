@@ -8,7 +8,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import dev.chetopuffet.authenticationapi.model.User;
 
 public interface UserRepository extends JpaRepository<User, UUID> {
-
   Optional<User> findByEmailAndActiveTrue(String username);
-  
+  Optional<User> findByIdAndActiveTrue(UUID fromString);
+  boolean existsByEmailAndActiveTrue(String email);
 }
