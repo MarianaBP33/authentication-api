@@ -40,6 +40,9 @@ public class User extends AbstractModificationAttributesEntity implements UserDe
   @Column(name="password", nullable=false)
   private String password;
 
+  @Column(name="points")
+  private Integer points;
+
   @Column(name="role", nullable=false)
   @Enumerated(EnumType.STRING)
   private Role role;

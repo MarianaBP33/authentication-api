@@ -5,7 +5,7 @@ spring:
     pathmatch:
       matching-strategy: ANT_PATH_MATCHER
   datasource:
-      url: ${database_url:jdbc:postgresql://localhost:5432/postgres}
+      url: ${database_url:jdbc:postgresql://174.138.72.45/postgres}
       username: ${db_user:postgres}
       password: ${db_password:root}
       driver-class-name: org.postgresql.Driver
