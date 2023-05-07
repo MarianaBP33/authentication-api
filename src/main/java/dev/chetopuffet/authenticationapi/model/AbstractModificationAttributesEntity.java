@@ -35,6 +35,6 @@ public abstract class AbstractModificationAttributesEntity extends AbstractSimpl
   private LocalDate updatedDate;
 
   @Column(name="active")
-  private boolean active;
+  private boolean active = true;
 
 }

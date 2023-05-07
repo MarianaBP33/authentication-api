@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import dev.chetopuffet.authenticationapi.model.Paro;
+import dev.chetopuffet.authenticationapi.model.dto.CreateParoDto;
 import dev.chetopuffet.authenticationapi.model.dto.ParoDto;
 import dev.chetopuffet.authenticationapi.repository.ParoRepository;
 import lombok.RequiredArgsConstructor;
@@ -30,19 +31,11 @@ public class ParoService {
         return parosLista;
     }
 
-    public Paro createParo(String ownerName, String description, Integer points){
-        var paroDto = new ParoDto();
-        paroDto.setActive(true);
-        paroDto.setDescription(description);
-        paroDto.setPoints(points);
-        paroDto.setOwnerName(ownerName);
-
-        var paro= new Paro();
-        paro.setActive(paroDto.getActive());
-        paro.setDescription(paroDto.getDescription());
-        paro.setOwnerName(paroDto.getOwnerName());
-        paro.setPoints(paroDto.getPoints());
-    
+    public Paro createParo(CreateParoDto createParoDto){
+        var paro = new Paro();
+        paro.setDescription(createParoDto.getDescription());
+        paro.setPoints(createParoDto.getPoints());
+        paro.setOwnerName(createParoDto.getOwnerName());
         return paroRepository.save(paro);
     }
 }
