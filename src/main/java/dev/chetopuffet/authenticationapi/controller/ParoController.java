@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import dev.chetopuffet.authenticationapi.exception.BadRequestException;
 import dev.chetopuffet.authenticationapi.exception.NotFoundException;
-import dev.chetopuffet.authenticationapi.model.Paro;
+import dev.chetopuffet.authenticationapi.model.dto.ParoDto;
 import dev.chetopuffet.authenticationapi.service.ParoService;
 import lombok.RequiredArgsConstructor;
 
@@ -21,7 +21,7 @@ public class ParoController {
     private final ParoService paroService;
 
     @GetMapping()
-    public ResponseEntity<List<Paro>> getAllParos() throws NotFoundException, BadRequestException {
+    public ResponseEntity<List<ParoDto>> getAllParos() throws NotFoundException, BadRequestException {
       return ResponseEntity.status(HttpStatus.OK).body(paroService.getAllParos());
   }
 }
