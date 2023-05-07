@@ -22,6 +22,6 @@ public class ParoController {
 
     @GetMapping()
     public ResponseEntity<List<Paro>> getAllParos() throws NotFoundException, BadRequestException {
-    return ResponseEntity.status(HttpStatus.OK).body(paroService.getAllParos());
+      return ResponseEntity.status(HttpStatus.OK).body(paroService.getAllParos());
   }
 }
