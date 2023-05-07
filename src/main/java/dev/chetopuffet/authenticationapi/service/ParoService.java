@@ -30,13 +30,19 @@ public class ParoService {
         return parosLista;
     }
 
-    public void createParo(String ownerName, String description, Integer points){
-        var paro = new Paro();
-        paro.setActive(true);
-        paro.setDescription(description);
-        paro.setPoints(points);
-        paro.setOwnerName(ownerName);
+    public Paro createParo(String ownerName, String description, Integer points){
+        var paroDto = new ParoDto();
+        paroDto.setActive(true);
+        paroDto.setDescription(description);
+        paroDto.setPoints(points);
+        paroDto.setOwnerName(ownerName);
+
+        var paro= new Paro();
+        paro.setActive(paroDto.getActive());
+        paro.setDescription(paroDto.getDescription());
+        paro.setOwnerName(paroDto.getOwnerName());
+        paro.setPoints(paroDto.getPoints());
     
-        paroRepository.save(paro);
+        return paroRepository.save(paro);
     }
 }
