@@ -7,8 +7,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import dev.chetopuffet.authenticationapi.model.Paro;
 
-public interface ParoRepository extends JpaRepository<UUID,Paro> {
-
-    List<Paro> findAllByActiveTrue();
-    
+public interface ParoRepository extends JpaRepository<Paro, UUID> {
+  List<Paro> findAllByActiveTrue();
 }

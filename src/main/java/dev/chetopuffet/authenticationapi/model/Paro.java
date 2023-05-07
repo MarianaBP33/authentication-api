@@ -26,8 +26,5 @@ public class Paro  extends AbstractModificationAttributesEntity{
 
     @Column(name="points", nullable=false)
     private Integer points;
-
-    @Column(name="active")
-    private Boolean active;
     
 }
